@@ -9,6 +9,25 @@ from google import genai
 st.set_page_config(page_title="MARC21 Cataloging Automation Tool", layout="wide", page_icon="📚")
 
 st.title("📚 MARC21 Cataloging Automation Tool")
+
+# ℹ️ ADICIONE ESTE BLOCO LOGO ABAIXO DO TÍTULO:
+with st.popover("ℹ️ Information / How to Use"):
+    st.markdown("""
+    With this **MARC21 Cataloging Automation Tool** you can process images of book title pages into MARC records.
+    
+    ### How to use:
+    * **Step 1.** Take images of the title pages of the books you want to catalog.
+    * **Step 2.** Insert your Gemini API Key (left corner).
+    * **Step 3.** Choose the images you want to upload.
+    * **Step 4.** Click on process (it takes about 30 seconds to process each image).
+    * **Step 5.** Download the csv-file with the MARC21 records.
+    
+    ---
+    *The tool was created by Marc Storms with the help of Gemini.*
+    """)
+
+
+
 st.markdown("Upload book title page images to automatically generate complete MARC21 bibliographic records using AI.")
 
 # --- Sidebar Configuration ---
